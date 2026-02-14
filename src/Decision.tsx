@@ -42,7 +42,7 @@ export const Decision = ({ sheSaidYesHandler }: DecisionProps) => {
 
   return (
     <>
-      <h1>Будеш моєю валентинкою?</h1>
+      <h1>{`Будеш моєю валентинкою?)))))`}</h1>
       <div className="decide">
         <button id="yesButton" style={{ fontSize: `${yesFontSize}em` }} onMouseEnter={goodDecisionHandler} onClick={sheSaidYesHandler}>
           Так 😍
