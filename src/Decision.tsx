@@ -6,8 +6,8 @@ type DecisionProps = {
 };
 
 export const Decision = ({ sheSaidYesHandler }: DecisionProps) => {
-  const [no,] = useState(new Audio('/src/assets/no2.ogg'));
-  const [yes,] = useState(new Audio('/src/assets/yes.ogg'));
+  const [no,] = useState(new Audio('./src/assets/no2.ogg'));
+  const [yes,] = useState(new Audio('./src/assets/yes.ogg'));
 
   const [yesFontSize, setYesFontSize] = useState(2);
   const [noFontSize, setNoFontSize] = useState(2);
