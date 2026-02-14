@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import yesAudio from './assets/yes.ogg';
+import noAudio from './assets/no2.ogg';
 import './App.css'
 
 type DecisionProps = {
@@ -6,8 +8,8 @@ type DecisionProps = {
 };
 
 export const Decision = ({ sheSaidYesHandler }: DecisionProps) => {
-  const [no,] = useState(new Audio('./assets/no2.ogg'));
-  const [yes,] = useState(new Audio('./assets/yes.ogg'));
+  const no = new Audio(noAudio);
+  const yes = new Audio(yesAudio);
 
   const [yesFontSize, setYesFontSize] = useState(2);
   const [noFontSize, setNoFontSize] = useState(2);

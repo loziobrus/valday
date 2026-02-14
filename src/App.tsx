@@ -1,18 +1,26 @@
 import { useEffect, useRef, useState } from 'react'
-import './App.css'
 import { Decision } from './Decision';
+import otakAudio from './assets/otak.ogg';
+import applauseAudio from './assets/applause.mp3';
+import yesyesAudio from './assets/yesyes.ogg';
+import uraAudio from './assets/ura.ogg';
+import hahaAudio from './assets/haha.ogg';
+import yeahAudio from './assets/yeah.ogg';
+import wohooAudio from './assets/wohoo.ogg';
+import fireworksVideo from './assets/fireworks.mp4';
+import './App.css'
 
 function App() {
   const [decided, setDecided] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const [otak,] = useState(new Audio('./assets/otak.ogg'));
-  const [applause,] = useState(new Audio('./assets/applause.mp3'));
-  const [yesyes,] = useState(new Audio('./assets/yesyes.ogg'));
-  const [ura,] = useState(new Audio('./assets/ura.ogg'));
-  const [haha,] = useState(new Audio('./assets/haha.ogg'));
-  const [yeah,] = useState(new Audio('./assets/yeah.ogg'));
-  const [wohoo,] = useState(new Audio('./assets/wohoo.ogg'));
+  const otak = new Audio(otakAudio);
+  const applause = new Audio(applauseAudio);
+  const yesyes = new Audio(yesyesAudio);
+  const ura = new Audio(uraAudio);
+  const haha = new Audio(hahaAudio);
+  const yeah = new Audio(yeahAudio);
+  const wohoo = new Audio(wohooAudio);
 
   useEffect(() => {
     if (decided && videoRef.current) {
@@ -46,7 +54,7 @@ function App() {
       <>
         <h1>Вона сказала тааак!!!🕺</h1>
         <video ref={videoRef}>
-          <source src="./assets/fireworks.mp4" type="video/mp4" />
+          <source src={fireworksVideo} type="video/mp4" />
         </video>
       </>
     ) : (
